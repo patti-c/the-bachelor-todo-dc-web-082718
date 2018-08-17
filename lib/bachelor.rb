@@ -44,19 +44,6 @@ def get_first_name_of_season_winner(data, season)
   end 
 end
 
-=begin def get_contestant_name(data, occupation)
-  data.each do |season, wrapper|
-    #binding.pry
-    wrapper.each do |contestant_value|
-        #binding.pry
-        if contestant_value[:occupation] == occupation
-          puts contestant_value[:name]
-          return contestant_value[:name]
-      end
-    end
-  end
-=end end
-
 def get_contestant_name(data, occupation)
   data.each do |season, wrapper|
     data[season].each do |contestant_value|
@@ -66,8 +53,6 @@ def get_contestant_name(data, occupation)
     end
   end
 end
-
-#get_contestant_name(data, 'Entertainer')
 
 def count_contestants_by_hometown(data, hometown)
   
